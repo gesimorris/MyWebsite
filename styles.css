@@ -1,0 +1,765 @@
+/* Import Google Fonts at the very top */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10px;
+    background-color: #008000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    flex-wrap: wrap;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: auto;
+    margin-left: 20px;
+    transition: color 0.3s;
+    padding: 8px 12px;
+    border-radius: 5px;
+    
+}
+ .navbar a:hover {
+     color: #e74c3c;
+ }
+.navbar a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+}
+.navbar a:hover::after {
+    width: 100%;
+    transition: width .3s;
+    background: #e74c3c;
+}
+
+/* Section Styling */
+.section {
+    width: 100%;
+    padding: 80px 20px;
+    box-sizing: border-box; /* Ensures padding is included in width/height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.page_title {
+    font-size: 3.5em;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 60px;
+    font-weight: 700;
+    color: white;
+    position: relative;
+ }
+ .page_title2 {
+     font-size: 3.5em;
+     font-family: 'Montserrat', sans-serif;
+     text-align: left;
+     margin: 0 0 40px 0;
+     
+     font-weight: 700;
+     color: black;
+     
+     
+  }
+  .page_title3 {
+    font-size: 3.5em;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: white;
+    position: relative;
+  }
+  .extra-subheading {
+    color: white;
+  }
+
+/* Welcome Section */
+#welcome_message {
+    background-color: white;
+    height: 100vh;
+}
+#profile_pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+#name {
+    font-size: 2.2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin: 10px 0;
+    color: black;
+    max-width: 50%;
+    justify-content: center;
+}
+#my_name {
+    color: #008000;
+    font-weight: 800;
+}
+
+/* Blog Preview */
+.blog-preview {
+    margin-bottom: 30px;
+}
+.blog-title {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.blog-posts-grid {
+    display: grid;
+    justify-content: center;
+}
+.blog-post-preview {
+    background-color: #2a2a51;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    max-width: 400px;
+}
+.post-cover-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.blog-post-preview h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.blog-post-preview p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.blog-post-preview a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.blog-post-preview a:hover {
+    color: #008c9e;
+}
+
+/* Links */
+.social-links {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+.social-links a {
+    color: white; /* Changed for visibility */
+    font-size: 28px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-links a:hover {
+    color: #0077b5; /* LinkedIn blue */
+    transform: scale(1.1);
+}
+
+/* Welcome Buttons */
+.welcome-buttons button {
+     padding: 14px 28px;
+     font-size: 0.95em;
+     font-weight: bold;
+     border-radius: 30px;
+     cursor: pointer;
+     transition: background-color 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
+     border: 2px solid white;
+     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+ }
+#contactButton {
+     background-color: dimgrey;
+     color: white;
+ }
+ #contactButton:hover {
+     background-color: grey;
+     transform: translateY(-2px);
+     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+ }
+
+/* Experience */
+
+/* ======================================= */
+/* WORK EXPERIENCE SECTION STYLES          */
+/* ======================================= */
+#work-experience-section {
+    background-color: #00192a;
+    /* Added padding to the section itself for better spacing from screen edges */
+    padding: 40px 0; 
+}
+
+.job-list-container {
+    display: flex;
+    flex-wrap: nowrap; /* CRITICAL: This prevents items from wrapping to the next line */
+    overflow-x: auto;  /* CRITICAL: This enables horizontal scrolling */
+    overflow-y: hidden;
+    gap: 40px; /* Use gap for consistent spacing between cards */
+    padding: 20px; /* Provides padding inside the scrollable area */
+    max-width: 100%; /* Use 100% instead of 100vw to avoid potential overflow issues */
+    margin: 0 auto;
+}
+
+/* Hide scrollbar for a cleaner look (optional) */
+.job-list-container::-webkit-scrollbar {
+    display: none;
+}
+
+.job-card {
+    width: 300px;
+    height: 350px;
+    perspective: 1000px;
+    flex-shrink: 0; /* CRITICAL: Prevents cards from shrinking to fit the container */
+    background-color: transparent;
+    border-radius: 15px;
+    /* Removed margin, as 'gap' on the container is now handling spacing */
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 15px; /* Matched border-radius for consistency */
+}
+
+.job-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 25px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* --- FIX FOR DIMENSION MISMATCH --- */
+    box-sizing: border-box; /* This ensures padding is included in the total width/height */
+}
+
+.card-front {
+    justify-content: center;
+    text-align: center;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start; /* Aligns the list to the start of the card */
+}
+
+/* --- Content Styling (Minor Adjustments) --- */
+.card-front img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+.card-front h4 {
+    color: black;
+    font-weight: 700;
+    margin: 10px 0 5px 0;
+    font-size: 1.4em;
+}
+
+.card-back ul {
+    list-style: disc;
+    padding-left: 20px; /* Standard padding for bullet points */
+    font-size: 0.9em;
+    color: black;
+    margin-top: 20px; /* Added some top margin for better spacing */
+}
+
+.card-back li {
+    margin-bottom: 10px; /* Increased margin for readability */
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.job-dates {
+    color: black;
+    font-size: 1.2em;
+}
+
+.job-location {
+    color: black;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+
+/* Projects Section */
+#projects-section {
+    background-color: white;
+    max-width: 940px;
+    padding: 80px 20px;
+    
+    
+}
+.section-subtitle {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: black
+}
+/* --- 1. The Grid Container --- */
+.project-grid-container {
+    display: grid;
+    /* This creates 3 evenly sized columns that adjust to the screen size */
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 20px; /* Space between the cards */
+    padding: 20px 0;
+    max-width: 9400px; /* Limits overall width for a cleaner look */
+    margin: 0 auto;
+}
+
+/* --- 2. The Project Card (The Bento Box) --- */
+.project-card {
+    /* Dimensions and Appearance */
+    height: 200px; /* Fixed height for consistent rectangular shape */
+    width: 400px; /* Full width of the grid cell */
+    border: 4px dotted #000000; /* Black border, no background color (transparent/white default) */
+    background-color: transparent; 
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer; /* Indicates it's clickable */
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    /* Layout for Text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.project-card h3 {
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: 900;
+    color: black; /* Your accent color */
+}
+
+.project-card p {
+    margin-top: 5px;
+    font-size: 1em;
+    font-weight: bolder;
+    color: black; /* Subtle text for the subtitle */
+}
+
+/* Hover Effect for visual feedback */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-color: #00bcd4; /* Accent border on hover */
+    border: 4px solid;
+}
+#project-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+/* --- 3. MODAL STYLING (Hidden by Default) --- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    color: #333; /* Dark text for light modal background */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Additional styling for keywords inside the modal */
+#modal-content-details .keywords {
+    font-weight: bold;
+    color: #00bcd4;
+    margin-top: 15px;
+    display: block;
+}
+
+#extra-section {
+    background-color:#00192a;
+    padding: 80px 20px;
+}
+/* ======================================= */
+/* 1. General Card Styling (Remains the same) */
+/* ======================================= */
+.extra.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+/* ======================================= */
+/* 2. Main Layout: VERTICAL STACKING */
+/* ======================================= */
+.extra-content {
+    /* Set a max-width for centering and readability, width: 100% works for filling parent */
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+    display: grid;
+    /* This forces the main blocks (which should be direct children) to stack */
+    grid-template-columns: 1fr;
+    gap: 2em; /* Spacing between the main content blocks (Blog block & Certs block) */
+}
+
+/* ======================================= */
+/* 3. Sub-Block Styling (Side-by-Side Content) */
+/* ======================================= */
+
+.side-by-side {
+    display: flex;
+    gap: 10px;
+    /* Ensures the side-by-side layout fills the card container */
+    width: 50%; 
+}
+
+/* Style for the two internal side-by-side columns */
+.blog-preview-item,
+#secureAI {
+    flex: 1; /* Makes both items take up equal space */
+    padding: 0 0 0 0; /* Remove internal padding if the card handles it, adjust as needed */
+    /* REMOVE BORDER/RADIUS/BACKGROUND if you want the main card to look uniform */
+    /* border: 1px solid #eee; */
+    /* border-radius: 8px; */
+}
+.blog-preview-item, #secureAI:hover {
+    transform: translateY(-5px);
+    
+}
+
+/* To avoid having the entire side-by-side section move on hover, 
+   the 'blog-preview' class should NOT be a card. */
+
+/* ======================================= */
+/* 4. Heading Styles (Simplified and Corrected) */
+/* ======================================= */
+
+.extra-subheading {
+    /* Assuming this is a section heading OUTSIDE of the card */
+    font-size: 2em;
+    color: white; /* Use a readable color */
+    margin-bottom: 2em;
+    
+}
+
+.card-subheading {
+    /* Style for headings INSIDE the cards or side-by-side items */
+    font-size: 3em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 1em;
+    border-bottom: 2px solid #eee; /* Optional separator */
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
+/* --- Responsive Adjustments for Side-by-Side --- */
+@media (max-width: 768px) {
+    .side-by-side {
+        flex-direction: column; /* Stack side-by-side content vertically on small screens */
+    }
+}
+
+/* ======================================= */
+/* 1. Base Certification Card Styling      */
+/* ======================================= */
+
+.certs-container {
+    /* Ensures the list can lay out correctly */
+    padding: 1em; 
+}
+
+.certification_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.cert-card-small {
+    /* Define a fixed, small size for the default state (just the logo) */
+    width: 300px; /* Small square width */
+    height: 300px; /* Small square height */
+    padding: 0; /* Minimal padding */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    overflow: hidden; /* Hide content that exceeds the initial size */
+    cursor: pointer; /* Indicate it's interactive */
+
+    /* Ensure a smooth transition for the size change */
+    transition: all 0.4s ease-in-out; 
+    
+   
+    border-radius: 8px;
+    background-color: transparent;
+    position: relative; /* Needed to position overlay details */
+}
+#card-body {
+    font-size: 1.5em;
+    font-weight: 900;
+}
+#cert-status-small {
+    font-size: 1.5em;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+    background-color: greenyellow;
+}
+.certification_link a {
+    color: black;
+    
+    font-style: italic;
+    font-size: 1.2em;
+    font-weight: 900;
+    transition: color 0.3s;
+    margin-top: 10px;
+
+}
+/* Make the logo fit the initial small box */
+.cert-card-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s;
+}
+
+/* ======================================= */
+/* 2. Hidden Details Styling (The Overlay) */
+/* ======================================= */
+
+/* Group all text content into a new element (see HTML fix below) */
+.cert-details-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white background for text */
+    padding: 15px;
+    box-sizing: border-box;
+    
+    /* Initially hide the overlay content */
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8); /* Start slightly smaller for a nice reveal animation */
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, visibility 0.4s;
+    
+    /* Ensure text is stacked nicely */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Hide the logo when the text overlay is visible */
+.cert-card-small:hover img {
+    opacity: 0;
+}
+
+/* ======================================= */
+/* 3. Hover Effect (The Reveal)          */
+/* ======================================= */
+
+.cert-card-small:hover {
+    /* Expand the card significantly to reveal the details */
+    width: 300px; /* New expanded width */
+    height: auto; /* Allow height to adjust to content */
+    z-index: 10; /* Bring to front so it's not clipped by neighbors */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Show the overlay content on hover */
+.cert-card-small:hover .cert-details-overlay {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1); /* Full size reveal */
+}
+
+/* Style the text within the revealed overlay */
+
+
+.cert-details-overlay h4 {
+    font-size: 1.1em;
+    margin-top: 0.25em;
+}
+
+/* Contact Section */
+#contact {
+    background-color: white
+}
+.contact_content {
+     text-align: center;
+     width: 100%;
+     max-width: 600px;
+ }
+.form-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Align labels to the left */
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #777;
+    background-color: #555;
+    color: white;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: ;
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+}
+
+.submit-button {
+    display: block;
+    width: 50%;
+    padding: 12px;
+    background-color: #008000;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 20px auto 0;
+}
+.submit-button:hover {
+    background-color: #008000;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .project-item,
+    .project-item.right {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+         justify-content: center;
+         padding: 10px;
+     }
+     #home {
+         font-size: 2em;
+         text-align: center;
+         width: 100%;
+         margin-bottom: 10px;
+         margin-right: 0;
+     }
+    #two-column-layout {
+        flex-direction: column-reverse; /* Stack About Me on top */
+    }
+    .right-column {
+        text-align: center;
+    }
+    #about p {
+         text-align: justify;
+     }
+     .page_title {
+          font-size: 2em;
+      }
+ }
+ @media (max-width: 600px) {
+    .side-by-side-wrapper {
+        flex-direction: column; /* Stack side-by-side content on tiny screens */
+    }
+}

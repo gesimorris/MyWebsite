@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a id="home" href="#welcome_message">☝🏾</a>
+        <a id="nav-text" href="#work-experience-section">Experience</a>
+        <a id="nav-text" href="#projects-section">Projects</a>
+        <a id="nav-text" href="#extra-section">Extras</a>
+        <a id="nav-text" href="#contact">Contact</a>
+    </nav>
+
+    <section id="welcome_message" class="section">
+        <img id="profile_pic"src="PP.jpg" alt="Profile Picture">
+        <h1 id="name">Hey, I'm <span id="my_name">Gesi Morris-Odubo.</span> I'm a Computer Science student with a focus on IT Operations. I love by tackling complex system problems and using my technical skills to automate solutions, making life genuinely easier for the people who rely on the tech.</h1>
+    </section>
+
+    <section id="work-experience-section" class="section">
+        <h2 class="page_title">My Experience</h2>
+        
+        <div class="job-list-container"> 
+            <div class="job-card">
+                <div class="card-inner">
+                    
+                    <div class="card-front">
+                        <img src="c&w.png" alt="Company Name Logo">
+                        <h4>Guest Service Representative</h4>
+                        <p class="job-dates">May 2025 - Present</p>
+                        <p class="job-location">Aberdeen Mall, Kamloops</p>
+                    </div>
+                    
+                    <div class="card-back">
+                        <ul>
+                            <li>Conduct daily UX/content audits; verifying website integrity.</li>
+                            <li>Provide Tier 1 support for customer procedural and directional issues.</li>
+                            <li>Manage transactions (gift cards, bus passes) using POS systems.</li>
+                            <li>Resolve high-volume customer complaints and system friction points.</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="job-card">
+                <div class="card-inner">  
+                    <div class="card-front">
+                        <img src="hbc.png" alt="Company Name Logo">
+                        <h4>Sales Associate & Cash Office Admin</h4>
+                        <p class="job-dates">May 2023 - May 2025</p>
+                        <p class="job-location">Aberdeen Mall, Kamloops</p>
+                    </div>    
+                    <div class="card-back">
+                        <ul>
+                            <li>Maintained high-level customer service and productivity during store liquidation and staff disruptions</li>
+                            <li>Daily auditing and closing of POS systems, ensuring 100% transactional balance for high-volume cash handling.</li>
+                            <li>Managed daily cash handling and organized secure preparation of funds for Brinks collection.</li>
+                            <li>Handled customer complaints regarding store closures, mitigating friction and maintaining brand image under pressure.</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="job-card">
+                <div class="card-inner">  
+                    <div class="card-front">
+                        <img src="oldnavy.jpg" alt="Company Name Logo">
+                        <h4>Sales Associate</h4>
+                        <p class="job-dates">June 2022 - Dec 2022</p>
+                        <p class="job-location">Aberdeen Mall, Kamloops</p>
+                    </div>    
+                    <div class="card-back">
+                        <ul>
+                            <li>Served as the primary point of contact for routine customer needs and product inquiries.</li>
+                            <li>Managed restocking and merchandising tasks while prioritizing a clean, organized, and streamlined operational environmen</li>
+                            <li>Processed all sales, returns, and exchanges using high-volume POS systems.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>            
+            <div class="job-card">
+                <div class="card-inner">  
+                    <div class="card-front">
+                        <img src="md.png" alt="Company Name Logo">
+                        <h4>Digital Marketing Intern</h4>
+                        <p class="job-dates">Sep 2021 - Dec 2021</p>
+                        <p class="job-location">Deira, Dubai</p>
+                    </div>    
+                    <div class="card-back">
+                        <ul>
+                            <li>Developed and executed strategies for online presence optimization across key social media platforms.</li>
+                            <li>Interpreted user engagement data to inform content creation and improve overall digital outreach performance.</li>
+                            <li>Designed and managed high-impact social media content to drive user traffic and interaction.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="job-card">
+                <div class="card-inner">  
+                    <div class="card-front">
+                        <img src="ua.png" alt="Company Name Logo">
+                        <h4>Track and Field Coach</h4>
+                        <p class="job-dates">Jul 2020 - Aug 2020</p>
+                        <p class="job-location">Sports City, Dubai</p>
+                    </div>    
+                    <div class="card-back">
+                        <ul>
+                            <li>Volunteered to coordinate and execute training programs for athletes (ages 8-13), translating complex technique into age-appropriate lessons.</li>
+                            <li>Developed and refined weekly lesson plans, including dynamic warm-ups and skill-focused drills with safety being the main priority.</li>
+                            <li>Managed group dynamics and communication to foster a positive and inclusive team environment.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <section id="projects-section">
+        <h2 class="page_title2">My Projects</h2>
+        <h3 class="section-subtitle">These are some projects I've worked on. Click on a project to see more details!</h3>
+        
+        <div class="project-grid-container"> 
+            
+            <div class="project-card" data-project-id="lab-network">
+                <img id="project-image" src="ailofi.png" alt="Project Image">
+                <h3>FeelScape</h3>
+                <p>Generate chill beats based on the mood of any picture you show it.</p>
+            </div>
+    
+            <div class="project-card" data-project-id="cleanup-script">
+                <img id="project-image" src="financetracker.jpg" alt="Project Image">
+                <h3>BudgetFlow</h3>
+                <p>An app for real-time finance tracking and simple budgeting.</p>
+            </div>
+    
+            <div class="project-card" data-project-id="med-app">
+                <img id="project-image" src="dosewise.jpg" alt="Project Image">
+                <h3>DoseWise</h3>
+                <p>Mindful dosing. Reliable tracking.</p>
+            </div>
+            <div class="project-card" data-project-id="med-app">
+                <img id="project-image" src="links.png" alt="Project Image">
+                <h3>Links</h3>
+                <p>Aggregating and visualizing local events for easy discovery.</p>
+            </div>
+    
+            </div>
+        
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2 id="modal-title"></h2>
+                <div id="modal-content-details">
+                    </div>
+            </div>
+        </div>
+    
+    </section>
+    <section id="extra-section">
+        <h2 class="page_title3">Extras</h2>
+        <h3 class="extra-subheading">A list of some videos and writings of my interests and certifications I've collected over the years! Hover over a specific certification to see more details. </h3>
+
+        <div class="extra-content">
+
+            <div class="extra card top-activity-card"> 
+                <div class="side-by-side">
+                    <div id="blog-posts-container" class="blog-preview-item">
+                        <p>Loading latest blog post...</p>
+                    </div>
+                </div>
+            </div>    
+
+            <div class="extra card certs-container">
+                <h3 class="card-subheading">Certifications</h3>
+                <ul class="certification_list">
+                    <li class="cert-card-small">
+                        <img src="udemy.png" alt="Udemy">
+                        
+                        <div class="cert-details-overlay">
+                            <p id="cert-status-small">Completed</p>
+                            <h4 id="card-body" class="cert-title-small">Python for Data Science and Machine Learning</h4>
+                            <div class="certification_link">
+                                <a href="https://www.linkedin.com/in/gesimorris/overlay/1718798491507/single-media-viewer/?profileId=ACoAADd_hkoBuiovEB6vTZLrTH0CLAQo3mbgUdU" target="_blank" rel="noopener noreferrer">More Information</a>
+                            </div>
+                        </div>
+                        </li>
+                </ul>
+            </div>
+    </section>
+
+
+    <section id="contact" class="section">
+        <h2 class="page_title2">Contact Me</h2>
+        <div class="contact_content">
+             <p class="contact-subheading">I'm always open to discussing new opportunities, projects, or collaborations. Feel free to reach out!</p>
+             <div class="form-container">
+                <form id="contact-form" action="https://formspree.io/f/mandgzjr" method="POST">
+                    <div class="form-group">
+                        <label for="form-name">Name</label>
+                        <input type="text" id="form-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+             </div>
+        </div>
+    </section>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/gesimorris/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/gesimorris" target="_blank" aria-label="Github Profile"><i class="fab fa-github"></i></a>
+    </div>
+
+    <script>
+        // GSAP Animations for Welcome Message
+        gsap.from("#Hi", {opacity: 0, y: -30, duration: 0.8, delay: 0.5});
+        gsap.from("#name", {opacity: 0, y: -30, duration: 0.8, delay: 0.7});
+        gsap.from("#title", {opacity: 0, y: -30, duration: 0.8, delay: 0.9});
+        gsap.from(".social-links", {opacity: 0, y: -30, duration: 0.8, delay: 1.0});
+        gsap.from(".welcome-buttons", {opacity: 0, y: -30, duration: 0.8, delay: 1.1});
+        gsap.from("#welcome_message .blog-preview", {opacity: 0, scale: 0.9, duration: 1, delay: 0.4});
+
+        // Blog posts
+    document.addEventListener('DOMContentLoaded', () => {
+    const blogContainer = document.getElementById('blog-posts-container');
+    const username = 'gesimorris';
+    const host = `gesilogbook.hashnode.dev`; // The standard Hashnode blog hostname
+
+    const GET_LATEST_POST_QUERY = `
+        query GetLatestPost($host: String!) {
+            publication(host: $host) {
+                posts(first: 1) {
+                    edges {
+                        node {
+                            title
+                            brief
+                            slug
+                            coverImage {
+                                url
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    `;
+
+    fetch('https://gql.hashnode.com/', { // <-- Make sure this is the correct URL
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            query: GET_LATEST_POST_QUERY,
+            variables: { host: host } // <-- Use 'host' variable now
+        }),
+    })
+    .then(response => {
+        // IMPROVED ERROR CHECK: Check HTTP status before trying to parse JSON
+        if (!response.ok) {
+            // Throw an error with the status code
+            throw new Error(`HTTP Error: ${response.status} - ${response.statusText}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        // NEW ACCESS PATH: Access data through the new structure: data.publication.posts.edges
+        const edges = data?.data?.publication?.posts?.edges;
+        
+        // Ensure posts exist and the array is not empty
+        if (edges && edges.length > 0) {
+            const latestPost = edges[0].node; // The actual post object is inside 'node'
+
+            const postElement = document.createElement('div');
+            postElement.classList.add('blog-post-preview');
+
+            // Handle potential null coverImage (check if latestPost.coverImage is not null)
+            const imageUrl = latestPost.coverImage?.url || 'fallback-image-url.png'; 
+
+            postElement.innerHTML = `
+                <img src="${imageUrl}" alt="${latestPost.title}" class="post-cover-image">
+                <h3>${latestPost.title}</h3>
+                <p>${latestPost.brief}</p>
+                <a href="https://${host}/${latestPost.slug}" target="_blank" rel="noopener noreferrer">Read More</a>
+            `;
+            blogContainer.innerHTML = ''; 
+            blogContainer.appendChild(postElement);
+        } else {
+            // This is the correct fallback if the query succeeds but returns an empty list
+            blogContainer.innerHTML = '<p>My latest blog post will appear here soon!</p>';
+        }
+    })
+    .catch(error => {
+        // This catches the 400 Bad Request error from the throw new Error
+        console.error('Error fetching blog post:', error);
+        blogContainer.innerHTML = `<p style="color: #ffcccc;"><strong>Error:</strong> Failed to load posts (${error.message}).</p>`;
+    });
+});
+
+        // Contact Me Button - Scroll to contact section
+        document.getElementById("contactButton").addEventListener("click", () => {
+            document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+        });
+
+        // GSAP ScrollTrigger Animations for Sections
+        gsap.registerPlugin(ScrollTrigger);
+
+        document.querySelectorAll(".section").forEach((section) => {
+             // Skip animation for the welcome section
+            if (section.id === 'welcome_message') return;
+
+            const pageTitle = section.querySelector('.page_title');
+            // Corrected and more specific content selectors
+            const contentElements = section.querySelectorAll('.certifications_list li, .skills_list li, .skill-card, .project-item, .contact_content > *');
+
+            if(pageTitle) {
+                gsap.from(pageTitle, {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.6,
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            }
+
+            if(contentElements.length > 0) {
+                gsap.from(contentElements, {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.5,
+                    stagger: 0.1,
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
