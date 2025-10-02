@@ -155,8 +155,8 @@
                     <p>Mindful dosing. Reliable tracking.</p>
                 </div>
             </a>
-            <a class="project-link" href="#" target="_blank">
-                <div class="project-card" data-project-id="links-app">
+            <a class="project-link">
+                <div class="project-card" data-project-id="construction">
                     <img id="project-image" src="links.png" alt="Project Image">
                     <h3>Links</h3>
                     <p>Aggregating and visualizing local events for easy discovery.</p>
@@ -236,6 +236,56 @@
     </div>
 
     <script>
+        // 1. Get references to the modal elements
+    const modal = document.getElementById('project-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalContentDetails = document.getElementById('modal-content-details');
+    const closeButton = document.querySelector('.close-button');
+
+// 2. Get all project items
+    const projectItems = document.querySelectorAll('[data-project-id="construction"]');
+
+// 3. Define the content for the "Under Construction" message
+    const underConstructionHTML = `
+    <p>Thank you for your interest! This project is currently under construction.</p>
+    <p>I am actively working on it and will update this section soon. Please check back later!</p>
+`;
+
+/**
+ * Opens the modal with the specified project title and the construction message.
+ * @param {string} title The title of the project clicked.
+ */
+    function showUnderConstruction(title) {
+    // Set the title and content
+    modalTitle.textContent = title;
+    modalContentDetails.innerHTML = underConstructionHTML;
+    
+    // Display the modal
+    modal.style.display = 'block';
+    }
+
+// 4. Attach event listeners to all project items
+    projectItems.forEach(item => {
+        item.addEventListener('click', () => {
+        // Get the project name to use in the modal title
+        const projectTitle = item.querySelector('h3').textContent;
+        showUnderConstruction(projectTitle);
+    });
+    });
+
+// 5. Setup functions to close the modal
+
+// When the user clicks on (x), close the modal
+closeButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
         // GSAP Animations for Welcome Message
         gsap.from("#Hi", {opacity: 0, y: -30, duration: 0.8, delay: 0.5});
         gsap.from("#name", {opacity: 0, y: -30, duration: 0.8, delay: 0.7});
