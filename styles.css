@@ -15,13 +15,13 @@ body {
 
 /* ==================== MAIN NAVIGATION SECTION ==================== */
 .main-nav-section {
-    min-height: 40vh;
+    min-height: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 40px 20px;
-    max-width: 1500px;
+    max-width: 2000px;
     margin: 0 auto;
 }
 
@@ -111,7 +111,7 @@ section {
 .page_title {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .services-grid {
@@ -140,18 +140,21 @@ section {
 }
 
 .project_title {
+    font-weight: 700;
     font-size: 16px;
     margin-top: 12px;
     margin-bottom: 8px;
 }
 
 .project_desc {
+    font-weight: 700;
     font-size: 13px;
     line-height: 1.6;
     margin-bottom: 8px;
 }
 
 .project_stack {
+    font-weight: 700;
     font-size: 14px;
     font-weight: bold;
     color: lightslategrey;
@@ -161,13 +164,14 @@ section {
     display: inline-block;
     font-size: 12px;
     padding: 5px 10px;
-    background-color: transparent;
-    border: 3px solid black;
-    color: white;
+    background-color: white;
+    border: 3px solid white;
+    color: black;
     cursor: pointer;
     transition: all 0.2s ease;
     text-decoration: none;
     letter-spacing: 1px;
+    margin-bottom: 20px;
 }
 
 .more_projects_button {
@@ -189,9 +193,13 @@ section {
     color: black;
 }
 
+#services-section {
+    max-width: 55%;
+}
+
 /* ==================== EXTRAS SECTION ==================== */
 #extra-section {
-    max-width: 900px;
+    max-width: 55%;
     margin: 0 auto;
     padding: 40px 20px;
 }
@@ -256,6 +264,81 @@ section {
     background-color: white;
     color: black;
 }
+/* ==================== PROJECT SLIDER (NEW) ==================== */
+.project-slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* One project showing at a time */
+.project-slide {
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    text-align: left; /* Kept left-aligned to match your style */
+    animation: fadeEffect 0.6s ease;
+}
+
+.project-slide.active {
+    display: flex;
+}
+
+/* Device Mockup Styling */
+.device-mockup {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Laptop width */
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #111;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Use your existing video/image heights */
+.mockup-content {
+    width: 100%;
+    height: 100%; /* Matching your .demos height */
+    object-fit: cover;
+    display: block;
+}
+
+/* For projects meant to be viewed on Phone */
+.phone-mockup {
+    max-width: 300px; 
+    height: 550px;
+    margin: 0 auto 25px auto;
+}
+
+/* Slider Arrows */
+.slider-arrow {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 20px;
+    transition: 0.3s ease;
+    z-index: 10;
+}
+
+.slider-arrow:hover {
+    color: lightslategrey;
+    transform: scale(1.1);
+}
+
+.left-arrow { position: absolute; left: -60px; }
+.right-arrow { position: absolute; right: -60px; }
+
 
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
@@ -279,4 +362,15 @@ section {
     .project_image {
         height: 220px;
     }
+}
+/* Responsive Arrows for Mobile */
+@media (max-width: 1000px) {
+    .left-arrow { left: -20px; }
+    .right-arrow { right: -20px; }
+    .slider-arrow { font-size: 24px; }
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

@@ -23,9 +23,9 @@
             </div>
             <p class="dev">Software Developer</p>
 
-            <p class="location">Full-stack developer specializing in AI integration and automation. 
-                I build production applications using Claude, React, and Python, delivering 
-                MVPs that help businesses scale.</p>
+            <p class="location">I’m a developer who enjoys the process of building and shipping 
+                functional systems. My experience ranges from engineering Tool-Calling AI Agents 
+                for industrial operations to implementing Matrix Factorization for recommendation engines.</p>
             <div class="tech-stack-row">
                 <div class="specific-language">
                   <i class="devicon-python-plain colored"></i>
@@ -40,78 +40,96 @@
                   <span>React</span>
                 </div>
                 <div class="specific-language">
-                  <i class="devicon-react-original colored"></i>
-                  <span>React Native</span>
-                </div>
-                <div class="specific-language">
                   <i class="devicon-nodejs-plain colored"></i>
                   <span>Node.js</span>
                 </div>
                 <div class="specific-language">
-                  <i class="devicon-html5-plain colored"></i>
-                  <span>HTML</span>
-                </div>
-                <div class="specific-language">
-                  <i class="devicon-css3-plain colored"></i>
-                  <span>CSS</span>
-                </div>
-                <div class="specific-language">
-                  <i class="devicon-mongodb-plain colored"></i>
-                  <span>MongoDB</span>
-                </div>
-                <div class="specific-language">
-                  <i class="devicon-mysql-plain colored"></i>
-                  <span>MySQL</span>
-                </div>
+                <i class="devicon-postgresql-plain colored"></i>
+                <span>PostgreSQL</span>
             </div>
+        </div>
         </div>
     </section>
 
 
     <section id="services-section">
         <p class="page_title">Projects</p>
-        <div class="services-grid">
-            <div class="project">
-                <div class="video-wrapper">
-                    <video class="demos" autoplay loop muted playsinline>
-                        <source src="Demos/opsready-demo.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <h3 class="project_title">OpsAgent</h3>
-                <p class="project_desc">OpsReady users struggled with complex data queries across tasks, 
-                    work orders, and assets. Built an agentic AI assistant using Claude's 
-                    function-calling API with 14+ tool integrations, CAS authentication, 
-                    and FastAPI backend to enable real-time operational data retrieval 
-                    via natural language.</p>
-                <p class="project_stack">Tech: Python, FastAPI, React, Claude API, CAS Auth, REST APIs</p>
-                <div class="project_links">
-                    <button class="links_button" onclick="window.open('https://github.com/gesimorris/Opsready-chatbot', '_blank')">🚀Github</button>
-                    <button class="links_button" onclick="window.open('/CaseStudies/Opsready_casestudy.pdf', '_blank')">🗒️Case Study</button>
-                </div>
-            </div>
-            <div class="project">
-                <div class="video-wrapper">
-                    <video class="demos" autoplay loop muted playsinline>
-                        <source src="Demos/feelscape-demo.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <h3 class="project_title">FeelScape</h3>
-                <p class="project_desc">Building an AI music generator that creates lo-fi beats based on image 
-                    mood. Analyzes photos using deep learning and generates matching chill 
-                    beats with FluidSynth audio synthesis. Upload any image, study setups, 
-                    aesthetics, artwork, and get custom lo-fi music.</p>
-                <p class="project_stack">Tech: Python, React, Deep Learning, FluidSynth</p>
-                <div class="project_links">
-                    <button class="links_button" onclick="window.open('https://github.com/gesimorris/FeelScape', '_blank')">🚀Github</button>
-                </div>
-            </div>
-        </div>
-        <button class="more_projects_button" onclick="window.open('https://github.com/gesimorris', '_blank')">More Projects</button>
-    </section>          
+        <div class="project-slider-container">
+            <button class="slider-arrow left-arrow" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
         
+            <div class="slider-wrapper">
+                <div class="project-slide active">
+                    <div class="project_links">
+                        <button class="links_button" onclick="window.open('https://github.com/gesimorris/Opsready-chatbot/blob/main/README.md')">Github</button>
+                        <button class="links_button" onclick="window.open('https://opsready-chatbot.vercel.app')">Live Demo</button>
+                    </div>
+                    <div class="device-mockup">
+                        <img src="Photos/OpsreadyUI.png" class="mockup-content">
+                    </div>
+                    <div class="project_info_text">
+                        <h3 class="project_title">OpsAgent</h3>
+                        <p class="project_desc">Developed as a functional MVP for OpsReady, an industrial management 
+                            firm in BC, OpsAgent is an AI-driven assistant that simplifies navigating complex work order 
+                            systems. Moving away from traditional search, I collaborated in a three-person team to engineer 
+                            a Tool-Calling Agent using Claude’s API. My contributions focused on building the backend logic 
+                            for 14+ custom tools, allowing the LLM to execute real-time queries and perform actions across 
+                            the company’s operational infrastructure through a natural language interface. Python, FastAPI, 
+                            Claude API, React, REST APIs</p>
+                        <p class="project_stack">Tech Stack: Python (FastAPI), Claude API (Anthropic), Tool Calling (Function Calling), and REST APIs.</p>
+                    </div>
+                </div>
+                
+                <div class="project-slide">
+                    <div class="project_links">
+                        <button class="links_button" onclick="window.open('https://github.com/gesimorris/Movie-Recommender-System/blob/main/README.md')">Github</button>
+                        <button class="links_button" onclick="window.open('https://github.com/gesimorris/Movie-Recommender-System/blob/main/README.md')">Live Demo</button>
+                    </div>
+                    <div class="device-mockup">
+                        <img src="Photos/cinemax_pic.png" class="mockup-content">
+                    </div>
+                    <div class="project_info_text">
+                        <h3 class="project_title">Cinemax</h3>
+                        <p class="project_desc">CineMax is a personal movie discovery platform inspired 
+                            by a night spent with a friend struggling to find high-quality retro 
+                            films in a sea of modern blockbusters. Designed to bridge the gap between 
+                            niche tastes and mainstream catalogs, the app uses a Hybrid Recommendation Engine
+                            that combines Collaborative Filtering (SVD) with a custom Content-Based boosting logic 
+                            to surface hidden gems. Currently serving a close-knit circle of film enthusiasts, 
+                            CineMax offers a sleek, dark-themed experience for building curated playlists and exploring 
+                            cinema by specific eras and genres
+                        </p>
+                        <p class="project_stack">Tech Stack: Python (Flask), React.js, NumPy, Pandas, SciPy (SVD), PostgreSQL, and JWT Authentication.</p>
+                        </div>
+                </div>
+        
+                <div class="project-slide">
+                    <div class="project_links">
+                        <button class="links_button" onclick="window.open('https://github.com/gesimorris/FeelScape/blob/main/README.md')">Github</button>
+                        <button class="links_button" onclick="window.open('https://feelscape-frontend.onrender.com')">Live Demo</button>
+                    </div>
+                    <div class="device-mockup">
+                        <img src="Photos/FeelscapeUI.png" class="mockup-content">
+                    </div>
+                    <div class="project_info_text">
+                        <h3 class="project_title">FeelScape</h3>
+                        <p class="project_desc">FeelsCape is an AI-powered music generator designed to create distraction-free LoFi 
+                            soundtracks for studying and deep work. The system uses computer vision to analyze the color temperature 
+                            and composition of user-uploaded images, synthesizing custom ambient tracks that match the visual mood of 
+                            their environment. While currently focused on generating short-form loops for a small user base, the project 
+                            is expanding into a generative platform capable of producing endless, personalized audio streams for productivity.</p>
+                        <p class="project_stack">Tech Stack: Python (FastAPI), OpenCV, NumPy, Scikit-learn, MIDI2Audio, and React.js.</p>
+                        </div>
+                </div>
 
+            </div>
+        
+            <button class="slider-arrow right-arrow" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    
+        <button class="more_projects_button" onclick="window.open('https://github.com/gesimorris', '_blank')">More Projects</button>
+    </section>   
+    <br><br>    
+    <hr>
     <section id="extra-section">
         <h3 class="extra-subheading">Contributions</h3>
         <div class="extra-content">
