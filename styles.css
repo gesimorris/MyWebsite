@@ -291,7 +291,34 @@ section {
 .project-slide.active {
     display: flex;
 }
+.evaluation-card {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 5px;
+    margin-top: 15px;
+    box-shadow: 0 0 15px rgba(0, 255, 120, 0.08);
+    overflow-x: auto;
+    width: 50%;
+    height: 150px;
+}
 
+.evaluation-card h5 {
+    color: #58a6ff;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    font-family: monospace;
+    letter-spacing: 0.5px;
+}
+
+.evaluation-card pre {
+    color: #3fb950;
+    font-family: "Courier New", monospace;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin: 0;
+    white-space: pre-wrap;
+}
 /* Device Mockup Styling */
 .device-mockup {
     position: relative;
